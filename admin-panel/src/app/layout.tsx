@@ -6,7 +6,7 @@ import { Poppins } from "next/font/google";
 import { Providers } from "@/redux/provider";
 
 export const metadata: Metadata = {
-  title: "Goodibag - eCommerce Admin Template",
+  title: "Goodibag",
 };
 
 const poppins = Poppins({
