@@ -21,13 +21,7 @@ const app = express();
 
 // middleware
 app.use(express.json());
-
-const corsOptions = {
-  origin: "https://goodibag.vercel.app",
-  credentials: true,
-};
-// app.use(cors());
-app.use(cors(corsOptions));
+app.use(cors());
 
 // run db
 ConnectDb();
