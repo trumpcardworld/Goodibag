@@ -23,7 +23,7 @@ const app = express();
 app.use(express.json());
 
 const corsOptions = {
-  origin: process.env.CLIENT_URL || "http://localhost:3000", // use your frontend domain in env
+  origin: process.env.CLIENT_URL, // use your frontend domain in env
   credentials: true,
 };
 // app.use(cors());
