@@ -21,7 +21,13 @@ const app = express();
 
 // middleware
 app.use(express.json());
-app.use(cors());
+
+const corsOptions = {
+  origin: process.env.CLIENT_URL || "http://localhost:3000", // use your frontend domain in env
+  credentials: true,
+};
+// app.use(cors());
+app.use(cors(corsOptions));
 
 // run db
 ConnectDb();
