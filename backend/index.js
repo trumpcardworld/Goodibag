@@ -23,7 +23,7 @@ const app = express();
 app.use(express.json());
 
 const corsOptions = {
-  origin: process.env.CLIENT_URL, // use your frontend domain in env
+  origin: "https://goodibag.vercel.app",
   credentials: true,
 };
 // app.use(cors());
