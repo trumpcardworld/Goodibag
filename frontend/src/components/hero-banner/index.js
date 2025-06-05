@@ -67,7 +67,7 @@ const slider_data = [
     ),
     title: (
       <>
-        Elegant Golden <br /> Gift Wrapping.
+        Elegant Golden <br /> Gift Wrapping
       </>
     ),
     img: slider_img_1,
@@ -81,7 +81,7 @@ const slider_data = [
     ),
     title: (
       <>
-        Red Polka Dot <br /> Gift Collection.
+        Red Polka Dot <br /> Gift Collection
       </>
     ),
     img: slider_img_2,
