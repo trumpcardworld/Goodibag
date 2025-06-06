@@ -21,7 +21,8 @@ const app = express();
 
 // middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({  origin: 'https://goodibag.vercel.app', // allow your frontend
+  credentials: true,}));
 
 // run db
 ConnectDb();
