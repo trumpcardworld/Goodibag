@@ -98,35 +98,36 @@ const brandRoutes = require("./routes/brandRoutes");
 // app init
 const app = express();
 
-// CORS configuration
-const corsOptions = {
-  origin: [
-    "http://localhost:3000",
-    "http://localhost:3001", 
-    "https://goodibag.vercel.app",
-    "https://goodibag-backend.vercel.app",
-    // Add your actual frontend domains here
-  ],
-  credentials: true,
-  optionsSuccessStatus: 200,
-  methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-  allowedHeaders: [
-    "Origin",
-    "X-Requested-With", 
-    "Content-Type",
-    "Accept",
-    "Authorization",
-    "Cache-Control",
-    "X-Access-Token"
-  ]
-};
+// Manual CORS middleware
+app.use((req, res, next) => {
+  const allowedOrigins = [
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'https://goodibag.vercel.app',
+    'https://goodibag-backend.vercel.app'
+  ];
+  
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+  
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, X-Access-Token');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  
+  // Handle preflight OPTIONS request
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+  
+  next();
+});
 
 // middleware
 app.use(express.json());
-app.use(cors(corsOptions));
-
-// Handle preflight requests
-app.options('*', cors(corsOptions));
+app.use(cors());
 
 // run db
 ConnectDb();
