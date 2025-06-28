@@ -13,7 +13,7 @@ type IBCType = {
 };
 
 const useProductSubmit = () => {
-  const [img, setImg] = useState<string>("");
+  const [img, setImg] = useState<string>();
   const [relatedImages, setRelatedImages] = useState<string[]>([]);
   // const [brand, setBrand] = useState<IBCType>({ name: '', id: '' });
   const [category, setCategory] = useState<IBCType>({ name: '', id: '' });
