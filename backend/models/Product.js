@@ -54,17 +54,17 @@ const productSchema = mongoose.Schema({
     required: true,
     trim: true,
   },
-  brand: {
-    name: {
-      type: String,
-      required: true,
-    },
-    id: {
-      type: ObjectId,
-      ref: "Brand",
-      required: true,
-    }
-  },
+  // brand: {
+  //   name: {
+  //     type: String,
+  //     required: true,
+  //   },
+  //   id: {
+  //     type: ObjectId,
+  //     ref: "Brand",
+  //     required: true,
+  //   }
+  // },
   category: {
     name: {
       type: String,

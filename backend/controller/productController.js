@@ -1,5 +1,5 @@
 const Product = require("../models/Product");
-const Brand = require("../models/Brand");
+// const Brand = require("../models/Brand");
 const Category = require("../models/Category");
 const ApiError = require("../errors/api-error");
 
@@ -12,12 +12,12 @@ module.exports.addProduct = async (req, res, next) => {
       relatedImages: imageURLs,
     });
     await newProduct.save();
-    const { _id: productId, brand, category } = newProduct;
+    const { _id: productId, category } = newProduct;
     //update Brand
-    await Brand.updateOne(
-      { _id: brand.id },
-      { $push: { products: productId } }
-    );
+    // await Brand.updateOne(
+    //   { _id: brand.id },
+    //   { $push: { products: productId } }
+    // );
     //Category update
     await Category.updateOne(
       { _id: category.id },

@@ -12,7 +12,7 @@ import ShopCta from "@components/cta";
 import Footer from "@layout/footer";
 
 export const metadata = {
-  title: "Home || Goodiebag"
+  title: "Home || GoodiBag"
 };
 
 const HomeShop = () => {
