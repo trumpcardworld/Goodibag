@@ -143,7 +143,7 @@ const useProductSubmit = () => {
     setImg,
     parent,
     // brand,
-    setBrand,
+    // setBrand,
     category,
     setCategory,
     handleSubmitProduct,
