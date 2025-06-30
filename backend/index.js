@@ -126,20 +126,20 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(cors(corsOptions));
 
 // Additional security headers
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', req.headers.origin || '*');
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, X-API-Key');
-  res.header('Access-Control-Allow-Credentials', 'true');
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', req.headers.origin || '*');
+//   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
+//   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, X-API-Key');
+//   res.header('Access-Control-Allow-Credentials', 'true');
   
-  // Handle preflight requests
-  if (req.method === 'OPTIONS') {
-    res.status(200).end();
-    return;
-  }
+//   // Handle preflight requests
+//   if (req.method === 'OPTIONS') {
+//     res.status(200).end();
+//     return;
+//   }
   
-  next();
-});
+//   next();
+// });
 
 // Logging middleware for debugging
 app.use((req, res, next) => {
