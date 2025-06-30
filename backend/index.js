@@ -98,8 +98,6 @@ const app = express();
 const corsOptions = {
   origin: [
     'https://goodibag.vercel.app',
-    'http://localhost:3000',
-    'http://localhost:3001',
     'http://127.0.0.1:3000',
     'https://your-production-domain.com', // Add your actual production domain
   ],
