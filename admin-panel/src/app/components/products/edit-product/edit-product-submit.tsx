@@ -19,13 +19,13 @@
 //     errors,
 //     tags,
 //     setTags,
-//     // control,
+//     control,
 //     setCategory,
 //     setParent,
 //     setChildren,
 //     setImg,
 //     img,
-//     // setBrand,
+//     setBrand,
 //     isSubmitted,
 //     relatedImages,
 //     setRelatedImages,
@@ -112,16 +112,16 @@
 
 
 //             {/* product type and brands start */}
-//             {/* <ProductTypeBrand
+//             <ProductTypeBrand
 //               register={register}
 //               errors={errors}
 //               control={control}
-//               // setSelectBrand={setBrand}
+//               setSelectBrand={setBrand}
 //               default_value={{
 //                 // brand: product.brand.name,
 //                 unit: product.unit,
 //               }}
-//             /> */}
+//             />
 //             {/* product type and brands end */}
 
 //             {/* product variations start */}
@@ -204,7 +204,6 @@ import ErrorMsg from "../../common/error-msg";
 import FormField from "../form-field";
 import DescriptionTextarea from "../add-product/description-textarea";
 import { useGetProductQuery } from "@/redux/product/productApi";
-import ProductTypeBrand from "../add-product/product-type-brand";
 import ProductVariants from "../add-product/product-variants";
 import ProductImgUpload from "../add-product/product-img-upload";
 import Tags from "../add-product/tags";
@@ -219,13 +218,11 @@ const EditProductSubmit = ({ id }: { id: string }) => {
     errors,
     tags,
     setTags,
-    // control, // Removed since not needed
     setCategory,
     setParent,
     setChildren,
     setImg,
     img,
-    // setBrand, // Already commented out correctly
     isSubmitted,
     relatedImages,
     setRelatedImages,
@@ -324,7 +321,7 @@ const EditProductSubmit = ({ id }: { id: string }) => {
             </div>
 
             {/* product type and brands start */}
-            {/* Removed ProductTypeBrand component entirely since brand functionality is not needed */}
+            {/* Removed ProductTypeBrand component since brand functionality is not needed */}
             {/* product type and brands end */}
 
             {/* product variations start */}
