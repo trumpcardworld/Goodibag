@@ -10,51 +10,6 @@ import slider_img_2 from "@assets/img/slider/13/gift-bag.png";
 import slider_img_3 from "@assets/img/slider/13/gift-box.png";
 import { RightArrow } from "@svg/index";
 
-// const slider_data = [
-//   {
-//     id: 1,
-//     pre_title: (
-//       <>
-//         Best Ear <br /> Headphones
-//       </>
-//     ),
-//     title: (
-//       <>
-//         Find Best <br /> Matley Sound.
-//       </>
-//     ),
-//     img: slider_img_1,
-//   },
-//   {
-//     id: 2,
-//     pre_title: (
-//       <>
-//         Best Ear <br /> Headphones
-//       </>
-//     ),
-//     title: (
-//       <>
-//         Find your <br /> Beats Studio.
-//       </>
-//     ),
-//     img: slider_img_2,
-//   },
-//   {
-//     id: 3,
-//     pre_title: (
-//       <>
-//         Best Ear <br /> Headphones
-//       </>
-//     ),
-//     title: (
-//       <>
-//         Music To <br /> Fill Your Heart
-//       </>
-//     ),
-//     img: slider_img_3,
-//   },
-// ];
-
 
 
 const slider_data = [

@@ -69,11 +69,11 @@ const Footer = () => {
                   col_3="2"
                   title="Company"
                   contents={[
-                    { url: "#", title: "About us" },
-                    { url: "#", title: "Careers" },
-                    { url: "#", title: "Store Locations" },
-                    { url: "#", title: "Our Blog" },
-                    { url: "#", title: "Reviews" },
+                    { url: "about", title: "About us" },
+                    { url: "contact", title: "Contact us" },
+                    { url: "contact", title: "Store Locations" },
+                    { url: "policy", title: "Privacy Policy" },
+                    { url: "terms", title: "Terms & Conditions" },
                   ]}
                 />
                 <SingleWidget

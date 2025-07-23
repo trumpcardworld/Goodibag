@@ -115,10 +115,10 @@ const ProductModal = ({ product, list_modal = false }) => {
               <div className="col-lg-6">
                 <div className="product__details-wrapper">
                   <h3 className="product__details-title">{title}</h3>
-                  <p className="mt-20">
+                  {/* <p className="mt-20">
                     Shop Harry.com for every day low prices. Free shipping on
                     orders $35+ or Pickup In-store and get
-                  </p>
+                  </p> */}
                   {/* Price */}
                   <OldNewPrice
                     originalPrice={originalPrice}
