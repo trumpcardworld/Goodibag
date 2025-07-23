@@ -192,26 +192,20 @@
 
 
 
-
-
-
-
-
-"use client";
-import React from "react";
-import useProductSubmit from "@/hooks/useProductSubmit";
-import ErrorMsg from "../../common/error-msg";
-import FormField from "../form-field";
-import DescriptionTextarea from "../add-product/description-textarea";
-import { useGetProductQuery } from "@/redux/product/productApi";
-import ProductVariants from "../add-product/product-variants";
-import ProductImgUpload from "../add-product/product-img-upload";
-import Tags from "../add-product/tags";
-import ProductCategory from "../../category/product-category";
-import Colors from "../add-product/colors";
+"use client"
+import useProductSubmit from "@/hooks/useProductSubmit"
+import ErrorMsg from "../../common/error-msg"
+import FormField from "../form-field"
+import DescriptionTextarea from "../add-product/description-textarea"
+import { useGetProductQuery } from "@/redux/product/productApi"
+import ProductVariants from "../add-product/product-variants"
+import ProductImgUpload from "../add-product/product-img-upload"
+import Tags from "../add-product/tags"
+import ProductCategory from "../../category/product-category"
+import Colors from "../add-product/colors"
 
 const EditProductSubmit = ({ id }: { id: string }) => {
-  const { data: product, isError, isLoading } = useGetProductQuery(id);
+  const { data: product, isError, isLoading } = useGetProductQuery(id)
   const {
     handleSubmit,
     register,
@@ -228,18 +222,20 @@ const EditProductSubmit = ({ id }: { id: string }) => {
     setRelatedImages,
     setColors,
     colors,
-    handleEditProduct
-  } = useProductSubmit();
+    handleEditProduct,
+  } = useProductSubmit()
 
   // decide what to render
-  let content = null;
+  let content = null
 
   if (isLoading) {
-    content = <h2>Loading....</h2>;
+    content = <h2>Loading....</h2>
   }
+
   if (!isLoading && isError) {
-    content = <ErrorMsg msg="There was an error" />;
+    content = <ErrorMsg msg="There was an error" />
   }
+
   if (!isLoading && !isError && product) {
     content = (
       <form onSubmit={handleSubmit((data) => handleEditProduct(data, id))}>
@@ -256,15 +252,10 @@ const EditProductSubmit = ({ id }: { id: string }) => {
                 errors={errors}
                 defaultValue={product.title}
               />
-              <DescriptionTextarea
-                register={register}
-                errors={errors}
-                defaultValue={product.description}
-              />
+              <DescriptionTextarea register={register} errors={errors} defaultValue={product.description} />
             </div>
-
             <div className="bg-white px-8 py-8 rounded-md mb-6">
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-x-6">
                 <FormField
                   title="price"
                   isRequired={true}
@@ -284,27 +275,25 @@ const EditProductSubmit = ({ id }: { id: string }) => {
                   register={register}
                   errors={errors}
                 />
-                <div className="col-span-2 grid grid-cols-2 gap-x-3">
-                  <FormField
-                    title="quantity"
-                    isRequired={true}
-                    placeHolder="Quantity"
-                    bottomTitle="Enter the product quantity."
-                    type="number"
-                    defaultValue={product.quantity}
-                    register={register}
-                    errors={errors}
-                  />
-                  <FormField
-                    title="unit"
-                    isRequired={true}
-                    placeHolder="Unit (kg, pcs, ltr, etc.)"
-                    bottomTitle="Enter the product unit."
-                    defaultValue={product.unit}
-                    register={register}
-                    errors={errors}
-                  />
-                </div>
+                <FormField
+                  title="quantity"
+                  isRequired={true}
+                  placeHolder="Quantity"
+                  bottomTitle="Enter the product quantity."
+                  type="number"
+                  defaultValue={product.quantity}
+                  register={register}
+                  errors={errors}
+                />
+                <FormField
+                  title="unit"
+                  isRequired={true}
+                  placeHolder="Unit (kg, pcs, ltr, etc.)"
+                  bottomTitle="Enter the product unit."
+                  defaultValue={product.unit}
+                  register={register}
+                  errors={errors}
+                />
               </div>
               <div className="mt-6">
                 <FormField
@@ -320,10 +309,6 @@ const EditProductSubmit = ({ id }: { id: string }) => {
               </div>
             </div>
 
-            {/* product type and brands start */}
-            {/* Removed ProductTypeBrand component since brand functionality is not needed */}
-            {/* product type and brands end */}
-
             {/* product variations start */}
             <ProductVariants
               isSubmitted={isSubmitted}
@@ -333,16 +318,9 @@ const EditProductSubmit = ({ id }: { id: string }) => {
             />
             {/* product variations end */}
           </div>
-
           {/* right side */}
           <div className="col-span-12 xl:col-span-4 2xl:col-span-3">
-            <ProductImgUpload
-              imgUrl={img}
-              setImgUrl={setImg}
-              default_img={product.image}
-              isSubmitted={isSubmitted}
-            />
-
+            <ProductImgUpload imgUrl={img} setImgUrl={setImg} default_img={product.image} isSubmitted={isSubmitted} />
             <div className="bg-white px-8 py-8 rounded-md mb-6">
               <p className="mb-5 text-base text-black">Product Category</p>
               {/* category start */}
@@ -359,28 +337,18 @@ const EditProductSubmit = ({ id }: { id: string }) => {
                 />
               </div>
             </div>
-
             <div className="bg-white px-8 py-8 rounded-md mb-6">
               <p className="mb-5 text-base text-black">Product Tags</p>
               {/* tags start */}
               <div className="grid grid-cols-1 sm:grid-cols-1 gap-3 mb-5">
-                <Tags
-                  tags={tags}
-                  setTags={setTags}
-                  default_value={product.tags}
-                />
+                <Tags tags={tags} setTags={setTags} default_value={product.tags} />
               </div>
             </div>
-
             <div className="bg-white px-8 py-8 rounded-md mb-6">
               <p className="mb-5 text-base text-black">Product Colors</p>
               {/* colors start */}
               <div className="grid grid-cols-1 sm:grid-cols-1 gap-3 mb-5">
-                <Colors 
-                  colors={colors} 
-                  setColors={setColors}
-                  default_value={product.colors}
-                />
+                <Colors colors={colors} setColors={setColors} default_value={product.colors} />
               </div>
             </div>
           </div>
@@ -389,10 +357,10 @@ const EditProductSubmit = ({ id }: { id: string }) => {
           Update Product
         </button>
       </form>
-    );
+    )
   }
 
-  return <>{content}</>;
-};
+  return <>{content}</>
+}
 
-export default EditProductSubmit;
+export default EditProductSubmit
