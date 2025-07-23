@@ -112,7 +112,7 @@ const EditProductSubmit = ({ id }: { id: string }) => {
 
 
             {/* product type and brands start */}
-            <ProductTypeBrand
+            {/* <ProductTypeBrand
               register={register}
               errors={errors}
               control={control}
@@ -121,7 +121,7 @@ const EditProductSubmit = ({ id }: { id: string }) => {
                 // brand: product.brand.name,
                 unit: product.unit,
               }}
-            />
+            /> */}
             {/* product type and brands end */}
 
             {/* product variations start */}
