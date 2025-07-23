@@ -19,7 +19,7 @@ const EditProductSubmit = ({ id }: { id: string }) => {
     errors,
     tags,
     setTags,
-    control,
+    // control,
     setCategory,
     setParent,
     setChildren,
