@@ -223,6 +223,7 @@ const ProductSubmit = () => {
             <h4 className="text-[22px]">General</h4>
             <FormField
               title="title"
+              
               isRequired={true}
               placeHolder="Product Title"
               register={register}
@@ -280,12 +281,12 @@ const ProductSubmit = () => {
           </div>
 
           {/* product type and brands start */}
-          <ProductTypeBrand
+          {/* <ProductTypeBrand
             register={register}
             errors={errors}
             control={control}
             // setSelectBrand={setBrand} // Removed - not needed
-          />
+          /> */}
           {/* product type and brands end */}
 
           {/* product variations start */}
