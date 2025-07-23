@@ -20,13 +20,13 @@ const ProductSubmit = () => {
     errors,
     tags,
     setTags,
-    // control,
+    control,
     setCategory,
     setParent,
     setChildren,
     setImg,
     img,
-    // setBrand,
+    setBrand,
     isSubmitted,
     relatedImages,
     setRelatedImages,
@@ -93,12 +93,12 @@ const ProductSubmit = () => {
           </div>
 
           {/* product type and brands start */}
-          {/* <ProductTypeBrand
+          <ProductTypeBrand
             register={register}
             errors={errors}
             control={control}
             setSelectBrand={setBrand}
-          /> */}
+          />
           {/* product type and brands end */}
 
           {/* product variations start */}
