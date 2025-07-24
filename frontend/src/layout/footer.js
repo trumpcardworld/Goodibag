@@ -82,11 +82,11 @@ const Footer = () => {
                   col_3="3"
                   title="Shop"
                   contents={[
-                    { url: "#", title: "Paper Gift Bags" },
-                    { url: "#", title: "Paper Gift Boxes" },
-                    { url: "#", title: "Cosmetic Packages" },
-                    { url: "#", title: "Food Packages" },
-                    { url: "#", title: "Tea & Wine Packages" },
+                    { url: "shop", title: "Paper Gift Bags" },
+                    { url: "shop", title: "Paper Gift Boxes" },
+                    { url: "shop", title: "Cosmetic Packages" },
+                    { url: "shop", title: "Food Packages" },
+                    { url: "shop", title: "Tea & Wine Packages" },
                   ]}
                 />
                 <SingleWidget
@@ -95,11 +95,10 @@ const Footer = () => {
                   col_3="4"
                   title="Support"
                   contents={[
-                    { url: "", title: "FAQs" },
-                    { url: "", title: "Reviews" },
+                    { url: "faq", title: "FAQs" },
+                    // { url: "review", title: "Reviews" },
                     { url: "", title: "Contact Us" },
-                    { url: "", title: "Shipping" },
-                    { url: "", title: "Returns" },
+                    // { url: "", title: "Shipping" },
                   ]}
                 />
 
